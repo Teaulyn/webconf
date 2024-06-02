@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户主页</title>
+    <style>
+        /* 样式 */
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* 父元素设置为相对定位 */
+        }
+        h2 {
+            color: #333;
+        }
+        .actions {
+            display: flex;
+            justify-content: flex-end; /* 右对齐 */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .actions button {
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .actions button:hover {
+            background-color: #2980b9;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute; /* 绝对定位 */
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0; /* 与按钮右对齐 */
+            top: 100%; /* 按钮下方 */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>用户主页</h2>
+        <div class="actions">
+            <div class="dropdown">
+                <button class="dropbtn">操作</button>
+                <div class="dropdown-content">
+                    <a href="#">新建文件</a>
+                    <a href="#">新建文件夹</a>
+                    <a href="#">复制</a>
+                    <a href="#">粘贴</a>
+                    <a href="#">删除</a>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>文件1</li>
+            <li>文件2</li>
+            <li>文件3</li>
+        </ul>
+    </div>
+</body>
+</html>
